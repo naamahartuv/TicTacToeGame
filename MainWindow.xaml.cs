@@ -50,6 +50,7 @@ namespace TicTacToe
                 {
                     CPU().Content = "O";
                     turn = !turn;
+                    turn_count++;
                     bool ans = checkForWinner();
                         
                 }
@@ -96,7 +97,7 @@ namespace TicTacToe
 
             else
             {
-                if (turn_count >= 8)
+                if (turn_count ==9)
                 {
                     MessageBox.Show("Draw!", "Bummer!");
                     return true;
